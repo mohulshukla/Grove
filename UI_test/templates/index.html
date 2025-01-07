@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grove Video Player</title>
+</head>
+<body>
+    <h1>Grove Video Player</h1>
+    
+    <!-- Video player -->
+    <video id="videoPlayer" width="640" height="480" controls autoplay>
+        <source id="videoSource" src="/video/{{ initial_video }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Navigation Buttons -->
+    <button id="leftBtn">Left (Random)</button>
+    <button id="downBtn">Down (Next Similar)</button>
+    <button id="rightBtn">Right (Random)</button>
+
+    <!-- Link to external JavaScript file in the static folder -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
